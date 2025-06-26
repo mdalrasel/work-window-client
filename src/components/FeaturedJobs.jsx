@@ -9,7 +9,7 @@ const FeaturedJobs = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tasks')
+        fetch('https://work-window-server.vercel.app/tasks')
             .then(res => res.json())
             .then(data => {
                 const sorted = data.sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
@@ -48,7 +48,7 @@ const FeaturedJobs = () => {
                                         <p className=" text-xs">{task.userEmail}</p>
                                     </div>
                                 </div>
-                                <Link to={`/tasks/${task._id}`} className="btn btn-primary my-5">
+                                <Link to={`/tasks/${task._id}`} className="border-x rounded-4xl hover:border-t  text-center p-2  font-bold border-b border-blue-500 my-5">
                                     View Details
                                 </Link>
                             </div>

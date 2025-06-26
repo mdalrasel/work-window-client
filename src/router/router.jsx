@@ -42,12 +42,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/tasks/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/tasks/${params.id}`),
+                loader: ({ params }) => fetch(`https://work-window-server.vercel.app/tasks/${params.id}`),
                 element: <PrivateRoute><TaskDetailsPage></TaskDetailsPage></PrivateRoute>
             },
             {
                 path: '/update/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/tasks/${params.id}`),
+                loader: ({ params }) => fetch(`https://work-window-server.vercel.app/tasks/${params.id}`),
                 Component:TaskUpdatePage
             },
             {

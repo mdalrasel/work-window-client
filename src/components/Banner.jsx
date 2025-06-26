@@ -5,10 +5,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Bounce, Fade } from 'react-awesome-reveal';
 import { Typewriter } from 'react-simple-typewriter';
+import { Link } from 'react-router';
 
 const Banner = () => {
     return (
-        <div className="hero  py-3 md:py-5  " data-aos="fade-up">
+        <div className="hero bg-base-200 rounded-md pt-5 py-3 md:py-5  " data-aos="fade-up">
             <Swiper
                 modules={[Navigation, Pagination,Autoplay]}
                 loop={true}
@@ -42,7 +43,7 @@ const Banner = () => {
                                 <p className="py-3 text-lg text-base-content roboto">Organize your daily tasks, set deadlines, and track your progress seamlessly. Achieve more with less effort.</p>
                             </Fade>
                             <Fade delay={900}>
-                                <button className="btn btn-lg mt-2 btn-primary" data-aos="zoom-in" data-aos-delay="1200">Get Started</button>
+                                <Link to='/tasks' className="btn btn-lg mt-2 btn-primary" data-aos="zoom-in" data-aos-delay="1200">Get Started</Link>
                             </Fade>
                         </div>
                         <div className="flex-1 flex justify-center items-center">
@@ -62,7 +63,7 @@ const Banner = () => {
                                 <p className="py-3 text-lg text-base-content roboto">Share tasks with your team, assign roles, and work together to meet common goals effectively.</p>
                             </Fade>
                             <Fade delay={900}>
-                                <button className="btn btn-lg mt-2 btn-secondary  roboto" data-aos="zoom-in" data-aos-delay="1200">Learn More</button>
+                                <Link to='/tasks' className="btn btn-lg mt-2 btn-secondary  roboto" data-aos="zoom-in" data-aos-delay="1200">Learn More</Link>
                             </Fade>
                         </div>
                         <div className="flex-1 flex justify-center items-center">
@@ -82,7 +83,7 @@ const Banner = () => {
                                 <p className="py-3 text-lg text-base-content">With powerful reminders and intuitive dashboards, never miss a deadline again.</p>
                             </Fade>
                             <Fade delay={900}>
-                                <button className="btn btn-lg mt-2 btn-accent" data-aos="zoom-in" data-aos-delay="1200">Explore Features</button>
+                                <Link to='/tasks' className="btn btn-lg mt-2 btn-accent" data-aos="zoom-in" data-aos-delay="1200">Explore Features</Link>
                             </Fade>
                         </div>
                         <div className="flex-1 flex justify-center items-center">
@@ -102,7 +103,7 @@ const Banner = () => {
                                 <p className="py-3 text-lg text-base-content roboto">Monitor task flow with charts and reports for better decision-making and performance analysis.</p>
                             </Fade>
                             <Fade delay={900}>
-                                <button className="btn btn-lg mt-2 roboto btn-primary" data-aos="zoom-in" data-aos-delay="1200">See Insights</button>
+                                <Link to='/tasks' className="btn btn-lg mt-2 roboto btn-primary" data-aos="zoom-in" data-aos-delay="1200">See Insights</Link>
                             </Fade>
                         </div>
                         <div className="flex-1 flex justify-center items-center">
@@ -122,7 +123,7 @@ const Banner = () => {
                                 <p className="py-3 text-lg text-base-content roboto">Easily integrate with your favorite tools like Google Calendar, Slack, and more.</p>
                             </Fade>
                             <Fade delay={900}>
-                                <button className="btn btn-lg mt-2 roboto btn-secondary" data-aos="zoom-in" data-aos-delay="1200">Connect Now</button>
+                                <Link to='/tasks' className="btn btn-lg mt-2 roboto btn-secondary" data-aos="zoom-in" data-aos-delay="1200">Connect Now</Link>
                             </Fade>
                         </div>
                         <div className="flex-1 flex justify-center items-center">

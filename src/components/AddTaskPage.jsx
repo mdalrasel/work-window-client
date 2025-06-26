@@ -16,7 +16,7 @@ const AddTaskPage = () => {
         newTask.userName = user?.displayName || user?.email || "";
         newTask.createdAt = new Date().toISOString();
 
-        fetch('http://localhost:5000/tasks', {
+        fetch('https://work-window-server.vercel.app/tasks', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newTask)

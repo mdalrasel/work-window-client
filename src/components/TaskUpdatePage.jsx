@@ -12,7 +12,7 @@ const TaskUpdatePage = () => {
         const formData = new FormData(form);
         const updatedTask = Object.fromEntries(formData.entries());
 
-        fetch(`http://localhost:5000/tasks/${task._id}`, {
+        fetch(`https://work-window-server.vercel.app/tasks/${task._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -112,7 +112,7 @@ const TaskUpdatePage = () => {
 
                 <button
                     type="submit"
-                    className="md:col-span-2 bg-emerald-600 text-white py-2 px-4 rounded-lg hover:bg-emerald-700 transition-all duration-300"
+                    className="md:col-span-2 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition"
                 >
                     Update Task
                 </button>

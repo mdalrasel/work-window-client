@@ -10,7 +10,7 @@ const MyPostedTasksPage = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/tasks?userEmail=${user.email}`)
+      fetch(`https://work-window-server.vercel.app/tasks?userEmail=${user.email}`)
         .then(res => res.json())
         .then(data => {
           const filteredTasks = data.filter(task => task.userEmail === user.email);
@@ -33,7 +33,7 @@ const MyPostedTasksPage = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tasks/${id}`, {
+        fetch(`https://work-window-server.vercel.app/tasks/${id}`, {
           method: 'DELETE',
         })
           .then(res => res.json())
@@ -56,7 +56,7 @@ const MyPostedTasksPage = () => {
   };
 
   const handleViewBids = (taskId) => {
-    fetch(`http://localhost:5000/bids/task/${taskId}`)
+    fetch(`https://work-window-server.vercel.app/bids/task/${taskId}`)
       .then(res => res.json())
       .then(data => {
         if (data.message) { 

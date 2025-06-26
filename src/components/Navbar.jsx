@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-lg px-4">
+    <div className="navbar">
       
       <div className="navbar-start">
         <div className="dropdown">
@@ -90,7 +90,7 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <Link to='/logIn' className="btn">Sign In</Link>
+          <Link to='/logIn'  className="px-2 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition">Sign In</Link>
         )}
       </div>
     </div>

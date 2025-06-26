@@ -13,7 +13,7 @@ const TaskDetailsPage = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/bids/count/${user.email}`)
+      fetch(`https://work-window-server.vercel.app/bids/count/${user.email}`)
         .then(res => res.json())
         .then(data => {
           setBidsCount(data.bidsCount);
@@ -22,7 +22,7 @@ const TaskDetailsPage = () => {
           console.error("Error fetching bids count:", error);
         });
 
-      fetch(`http://localhost:5000/bids/check-bid/${task._id}/${user.email}`)
+      fetch(`https://work-window-server.vercel.app/bids/check-bid/${task._id}/${user.email}`)
         .then(res => res.json())
         .then(data => {
           setHasUserAlreadyBid(data.hasBid);
@@ -77,7 +77,7 @@ const TaskDetailsPage = () => {
       bidDate: new Date().toISOString(),
     };
 
-    fetch('http://localhost:5000/bids', {
+    fetch('https://work-window-server.vercel.app/bids', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ const TaskDetailsPage = () => {
     <div>
       <div className="p-8 rounded-lg shadow-md max-w-3xl mx-auto my-8">
         <p className="text-xl font-medium text-center mb-4">
-          You bid for <span className="font-bold text-primary">{bidsCount}</span> opportunities.
+          You bid for <span className="font-bold text-blue-500">{bidsCount}</span> opportunities.
         </p>
         <h2 className="text-3xl font-bold mb-6 text-center oswald">Task Details</h2>
         <div className="space-y-4">
@@ -158,7 +158,7 @@ const TaskDetailsPage = () => {
           >
             <button
               onClick={handleBidNow}
-              className="btn btn-primary w-full mt-6"
+               className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition"
               disabled={isBidButtonDisabled}
             >
               Bid Now
